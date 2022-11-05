@@ -1,0 +1,335 @@
+@layer components {
+  /* divider */
+  .divider {
+    @apply w-14 border-none bg-hr;
+    height: 2px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  .dividerGradient {
+    background: linear-gradient(90deg, #070720, #5f5f7b 50%, #070720);
+  }
+
+  /* link */
+
+  .link {
+    @apply text-link;
+  }
+
+  /* welcome */
+  .welcome {
+    @apply relative flex justify-center items-center w-full z-10 bg-primary pt-10 pb-10;
+  }
+
+  /* mainButton */
+  .primaryButton {
+    @apply flex text-base justify-center items-center text-white bg-coloredPrimary rounded-main font-semibold h-12 pl-3 pr-3 cursor-pointer;
+  }
+
+  /* secondaryButton */
+  .secondaryButton {
+    @apply flex text-base justify-center items-center text-white bg-primary rounded-main font-semibold h-12 pl-3 pr-3 cursor-pointer border border-gray;
+  }
+
+  /* header */
+  .header {
+    @apply duration-150;
+    box-shadow: 0 0 -10px 2px rgba(0, 0, 0, 0.5);
+  }
+
+  /* welcomeBackground */
+  .welcomeBackground {
+    @apply absolute w-4/7 h-full right-0 bg-cover;
+
+    &::before {
+      @apply absolute w-full h-full;
+      content: "";
+      background: linear-gradient(90deg, rgba(7, 7, 32, 1) 0%, rgba(7, 7, 32, 0) 60%);
+    }
+
+    &::after {
+      @apply absolute bottom-0 w-full h-full;
+      content: "";
+      background: linear-gradient(0deg, rgba(7, 7, 32, 1) 0%, rgba(7, 7, 32, 0) 30%);
+    }
+  }
+
+  .webp .welcomeBackground {
+    background-image: url("../img/webp/annie-art-min.webp");
+  }
+
+  .no-webp .welcomeBackground {
+    background-image: url("../img/annie-art-min.jpg");
+  }
+}
+
+/* sectionTitle */
+.sectionTitle {
+  @apply text-sectionTitle font-semibold font-barlow text-center text-white uppercase tracking-wide;
+}
+
+/* subTitle */
+.subTitle {
+  @apply leading-6 text-textAction text-center pt-1;
+}
+
+/* reviewsStar */
+
+.reviewsStar {
+  @apply w-12 h-12 bg-center bg-no-repeat m-2 rounded-main;
+  background-color: #41a153;
+  background-image: url("../img/star-icon.svg");
+}
+
+/* .reviewsCounterNumber */
+
+.reviewsCounterNumber {
+  @apply flex justify-center items-center text-primary rounded-main bg-white text-5xl font-extrabold w-14;
+  margin: 6px;
+  height: 90px;
+}
+
+/* smurf */
+
+.smurf {
+  @apply flex bg-secondary rounded-main border border-gray mt-4 mb-4 duration-300;
+  width: 300px;
+
+  & .row {
+    @apply w-full leading-9 text-base flex justify-between items-center text-text;
+  }
+}
+
+.smurfLighted {
+  color: #acb2b8;
+  font-weight: bold;
+}
+
+/* advantage */
+
+.advantage {
+  @apply flex flex-1 flex-col items-center m-8 rounded-main;
+  min-width: 200px;
+
+  & img {
+    @apply duration-300;
+  }
+
+  &:hover {
+    & img {
+      transform: scale(1.1);
+    }
+  }
+
+  & .advantage__title {
+    @apply text-center font-bold text-2xl font-barlow;
+  }
+
+  & .advantage__text {
+    @apply text-center leading-6 text-sm-base pt-2 text-text;
+  }
+
+  & .advantage__img {
+    @apply duration-300 w-32;
+  }
+}
+
+/* accordion */
+
+.accordion {
+  @apply flex flex-col items-center w-full;
+  max-width: 800px;
+
+  & .accordion__item {
+    @apply w-full flex flex-col;
+    margin-top: 6px;
+    margin-bottom: 6px;
+  }
+
+  & .accordion__question {
+    @apply cursor-pointer font-barlow text-lg pl-5 pr-5 flex items-center justify-between pt-3 pb-3 leading-6 bg-secondary rounded-main duration-300 hover:bg-secondaryLight;
+    min-height: 40px;
+  }
+
+  & .accordion__paragraph {
+    @apply mt-2 mb-0;
+  }
+
+  & .accordion__openIcon {
+    @apply duration-300 text-base;
+  }
+
+  & .accordion__answer {
+    @apply overflow-hidden flex-col items-start max-h-0 opacity-0 duration-300 text-base leading-7 pl-5 pr-5 inline-block;
+  }
+
+  & .accordion__active {
+    & .accordion__openIcon {
+      transform: rotate(90deg);
+    }
+
+    & .accordion__question {
+      @apply bg-secondaryLight;
+    }
+
+    & .accordion__answer {
+      @apply mt-3 mb-4 opacity-100;
+    }
+  }
+}
+
+/* footer */
+
+.footer {
+  & .footer__link {
+    @apply flex items-center h-full duration-300;
+
+    & svg {
+      @apply duration-300;
+    }
+
+    &:hover {
+      @apply text-grey;
+
+      & svg {
+        filter: brightness(70%);
+      }
+    }
+  }
+}
+
+/* textSheet */
+
+.textSheet {
+  @apply w-full flex text-left flex-col;
+
+  & .textSheet__title {
+    @apply pt-8 pb-4 text-2xl text-primary;
+  }
+
+  & .textSheet__text {
+    @apply text-base leading-7 text-whiteDarker font-roboto;
+  }
+
+  & .textSheet__img {
+    @apply w-full pt-5;
+  }
+}
+
+/* pageTitle */
+
+.pageTitle {
+  @apply text-4xl leading-snug font-barlow font-semibold text-center uppercase tracking-wide;
+}
+
+/* overlay */
+
+.overlay {
+  @apply hidden fixed w-full h-screen items-center justify-center z-40 left-0 top-0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* responsiveMenu */
+
+.responsiveMenu {
+  @apply justify-center duration-300 fixed left-0 top-0 h-screen z-40 bg-primary;
+  width: 275px;
+  transform: translateX(-275px);
+}
+
+.cart {
+  @apply flex justify-center duration-300 fixed right-0 top-0 z-40 bg-primary;
+  min-height: 100vh;
+  width: 100%;
+  max-width: 100%;
+  transform: translateX(100%);
+}
+
+/* popupMsg */
+
+#popupMsg {
+  background-color: white;
+  color: black;
+}
+
+.popupMsg__triangle {
+  top: -28px;
+  position: absolute;
+  border: 14px solid transparent;
+  border-bottom: 14px solid white;
+}
+
+.cartPing {
+  @apply absolute w-2 h-2 z-50;
+  left: -10px;
+  border-radius: 999px;
+  background: #41a153;
+}
+
+/* serversToggle */
+
+.serversToggle__toggler:not(.serverSwitcher_active):hover {
+  @apply bg-secondaryExtraLight;
+}
+
+/* popupNotification */
+
+.popupNotification {
+  @apply flex justify-center items-center fixed left-1/2 w-full max-w-sm bg-error p-3 z-50 top-9 rounded-main;
+  transform: translateX(-50%);
+}
+
+/* cart */
+
+.cart__form {
+  width: 400px;
+}
+
+/* giftingBackground */
+
+.giftingBackground {
+  @apply absolute w-full h-full left-0 bg-cover;
+}
+
+.webp .giftingBackground {
+  background: url("../img/webp/infernal-akali-min.webp");
+  background-size: cover;
+}
+
+.no-webp .giftingBackground {
+  background: url("../img/infernal-akali-min.jpeg");
+  background-size: cover;
+}
+
+.giftingGradient {
+  @apply absolute w-full h-full;
+  content: "";
+  background: linear-gradient(90deg, rgba(7, 7, 32, 0) 0%, rgba(7, 7, 32, 0.92) 45%);
+}
+
+.dropDownMenu {
+  @apply absolute mt-6 p-3 rounded-main bg-primaryDark hidden;
+  width: 200%;
+  left: -50%;
+  -webkit-box-shadow: 0 0 8px 0 rgba(186, 186, 186, 0.2);
+  -moz-box-shadow: 0 0 8px 0 rgba(186, 186, 186, 0.2);
+  box-shadow: 0 0 8px 0 rgba(186, 186, 186, 0.2);
+}
+
+.dropDownMenu::before {
+  @apply absolute w-full h-6 opacity-0;
+  top: -2rem;
+  content: "";
+}
+
+/* .dropdown1:hover .dropDownMenu {
+} */
+
+.mainInput {
+  @apply bg-secondaryAction rounded-main;
+
+  &::placeholder {
+    @apply text-special;
+  }
+}

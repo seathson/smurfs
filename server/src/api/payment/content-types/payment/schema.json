@@ -1,0 +1,19 @@
+{
+  "kind": "singleType",
+  "collectionName": "payments",
+  "info": {
+    "singularName": "payment",
+    "pluralName": "payments",
+    "displayName": "Payment",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "default": {
+      "type": "string"
+    }
+  }
+}

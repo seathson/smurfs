@@ -1,0 +1,25 @@
+{
+  "typescript.validate.enable": false,
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "~/*": [
+        "./*"
+      ],
+      "@/*": [
+        "./*"
+      ],
+      "~~/*": [
+        "./*"
+      ],
+      "@@/*": [
+        "./*"
+      ]
+    }
+  },
+  "exclude": [
+    "node_modules",
+    ".nuxt",
+    "dist"
+  ]
+}

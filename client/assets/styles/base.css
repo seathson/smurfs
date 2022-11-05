@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@layer base {
+  html {
+    font-size: 14px;
+  }
+
+  body {
+    @apply font-roboto text-white bg-primary;
+  }
+}
+
+*,
+*::before,
+*::after {
+  @apply box-border;
+}
+
+a {
+  @apply text-white cursor-pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  @apply m-0 p-0 font-normal;
+}
+
+.container {
+  @apply flex relative flex-wrap justify-center ml-6 mr-6 w-full;
+  max-width: 1300px;
+}
+
+.container-fluid {
+  @apply flex relative justify-center pl-3 pr-3 ml-3 mr-3;
+}
+
+.container-text {
+  @apply flex relative justify-center pl-3 pr-3 ml-3 mr-3;
+  max-width: 900px;
+}
+
+.container-md {
+  max-width: 800px;
+}
+
+.success {
+  color: rgba(150, 255, 150, 0.6) !important;
+}
+
+.warning {
+  color: yellow !important;
+}
+
+.error {
+  color: rgba(255, 140, 165, 0.65) !important;
+}

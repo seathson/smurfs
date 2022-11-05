@@ -1,0 +1,19 @@
+{
+  "kind": "singleType",
+  "collectionName": "checkouts",
+  "info": {
+    "singularName": "checkout",
+    "pluralName": "checkouts",
+    "displayName": "Checkout",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "default": {
+      "type": "string"
+    }
+  }
+}

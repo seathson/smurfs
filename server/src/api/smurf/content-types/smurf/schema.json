@@ -1,0 +1,66 @@
+{
+  "kind": "collectionType",
+  "collectionName": "smurfs",
+  "info": {
+    "singularName": "smurf",
+    "pluralName": "smurfs",
+    "displayName": "Smurf",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "finalPrice": {
+      "type": "decimal",
+      "required": true
+    },
+    "levelingType": {
+      "type": "enumeration",
+      "enum": [
+        "botted",
+        "handleveled"
+      ],
+      "required": true
+    },
+    "warranty": {
+      "type": "string",
+      "required": true
+    },
+    "originalPrice": {
+      "type": "decimal"
+    },
+    "resource": {
+      "type": "string",
+      "required": true
+    },
+    "level": {
+      "type": "string",
+      "default": "Level 30 or higher",
+      "required": true
+    },
+    "rank": {
+      "type": "string",
+      "required": true
+    },
+    "isFeatured": {
+      "type": "boolean",
+      "default": false
+    },
+    "server": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::server.server",
+      "inversedBy": "smurfs"
+    },
+    "credentials": {
+      "type": "richtext",
+      "private": true
+    }
+  }
+}

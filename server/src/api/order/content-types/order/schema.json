@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "orders",
+  "info": {
+    "singularName": "order",
+    "pluralName": "orders",
+    "displayName": "Order",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "email": {
+      "type": "string",
+      "required": true
+    },
+    "quantity": {
+      "type": "integer",
+      "required": true
+    },
+    "newsletter": {
+      "type": "boolean",
+      "default": false
+    },
+    "isPaymentCredited": {
+      "type": "boolean",
+      "default": false
+    },
+    "smurf": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::smurf.smurf"
+    },
+    "delivered_accounts": {
+      "type": "richtext",
+      "private": true
+    },
+    "coupon": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::coupon.coupon"
+    },
+    "cost": {
+      "type": "decimal",
+      "required": true
+    }
+  }
+}

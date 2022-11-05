@@ -1,0 +1,123 @@
+@layer utilities {
+  input:focus-visible {
+    outline: none;
+  }
+
+  /* responsiveMenu */
+  .responsiveMenu_active {
+    transform: translateX(0);
+  }
+
+  .flex_important {
+    display: flex;
+  }
+
+  .hidden_important {
+    display: none;
+  }
+
+  .primaryButton_anime:hover {
+    background-color: #ffb300;
+  }
+
+  .secondaryButton_anime:hover {
+    @apply bg-secondary;
+  }
+
+  .cart_active {
+    transform: translateX(0);
+  }
+
+  /* serverSwitcher */
+
+  .serverSwitcher_active {
+    @apply bg-coloredSecondary;
+    box-shadow: 0 0 10px 0 rgb(88, 92, 122);
+  }
+
+  /* highlight */
+
+  .discord_highlight {
+    @apply duration-200;
+    -webkit-box-shadow: 0px 0px 8px 6px rgba(114, 137, 218, 0.2);
+    -moz-box-shadow: 0px 0px 8px 6px rgba(114, 137, 218, 0.2);
+    box-shadow: 0px 0px 8px 6px rgba(114, 137, 218, 0.2);
+  }
+
+  .discord_highlight:hover {
+    -webkit-box-shadow: 0px 0px 9px 9px rgba(105, 126, 202, 0.2);
+    -moz-box-shadow: 0px 0px 9px 9px rgba(105, 126, 202, 0.2);
+    box-shadow: 0px 0px 9px 9px rgba(105, 126, 202, 0.2);
+  }
+
+  /* radialGradient */
+
+  .errorLayout_radialGradient {
+    @apply absolute w-full h-full;
+    background: radial-gradient(circle, rgba(7,7,32,0) 0%, rgba(7,7,32,1) 50%, rgba(7,7,32,1) 100%);
+  }
+
+  /* Fade tested not ready animation for Vue (dropdown menu in header) */
+
+  .fade-enter-active,
+  .fade-leave-active {
+    transition: opacity 0.5s ease;
+  }
+
+  .fade-enter-from {
+    opacity: 0;
+  }
+
+  .fade-enter-to {
+    opacity: 1;
+  }
+
+  .fade-leave-from {
+    opacity: 1;
+  }
+
+  .fade-leave-to {
+    opacity: 0;
+  }
+
+  /* Media Queries */
+
+  @media screen and (min-width: 400px) {
+    .smurf {
+      @apply mt-4 mb-4 ml-2 mr-2;
+    }
+
+    html {
+      font-size: 15px;
+    }
+  }
+
+  @media screen and (min-width: 640px) {
+    .welcome {
+      min-height: 45vh;
+    }
+
+    .cart {
+      width: 430px;
+    }
+
+    .smurf {
+      @apply m-4;
+    }
+
+    html {
+      font-size: 16px;
+    }
+  }
+
+  /* @media screen and (min-width: 768px) {
+  } */
+
+  @media screen and (min-width: 1024px) {
+    .welcome {
+      min-height: 50vh;
+    }
+  }
+
+  /* @media screen and (min-width: 1279px) {} */
+}

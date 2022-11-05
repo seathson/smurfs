@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "servers",
+  "info": {
+    "singularName": "server",
+    "pluralName": "servers",
+    "displayName": "Server",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "acronym": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "order": {
+      "type": "integer",
+      "required": true,
+      "unique": true
+    },
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "smurfs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::smurf.smurf",
+      "mappedBy": "server"
+    }
+  }
+}
